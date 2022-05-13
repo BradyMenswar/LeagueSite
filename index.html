@@ -5,13 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Champion Generator</title>
-
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <p id="test">Test</p>
-    <img id="full-image" src="" alt="Champion image">
-
-    <button onclick="refresh()">Refresh</button>
+    <div class="container">
+        <div class="card">
+            <div id="top-section">
+                <img id="champ-image" src="" alt="">
+            </div>
+            <div id="bottom-section">
+                <h2 id="champ-name"></h2>
+                <h3 id="champ-title"></h3>
+                <p id="champ-desc"></p>
+            </div>
+        </div>
+        <button class="refresh" onclick="refresh()">Refresh</button>
+    </div>
+    
+    
 </body>
 </html>

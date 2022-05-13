@@ -1,5 +1,7 @@
-let para = document.getElementById("test");
-let img = document.getElementById("full-image");
+let champName = document.getElementById("champ-name");
+let champTitle = document.getElementById("champ-title");
+let champDesc = document.getElementById("champ-desc");
+let champImg = document.getElementById("champ-image");
 
 var champData;
 
@@ -21,8 +23,10 @@ function refresh() {
 
     let currentChampion = champData.data[Object.keys(champData.data)[champIndex]]
     console.log(champData.data);
-    para.textContent = currentChampion.name;
-    img.src = "LeagueData/img/champion/centered/" + Object.keys(champData.data)[champIndex] + "_0.jpg";
+    champName.textContent = currentChampion.name;
+    champTitle.textContent = currentChampion.title;
+    champDesc.textContent = currentChampion.blurb;
+    champImg.src = "LeagueData/img/champion/splash/" + Object.keys(champData.data)[champIndex] + "_0.jpg";
 
     
 }

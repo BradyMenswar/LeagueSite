@@ -1,0 +1,61 @@
+:root {
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 100vh;
+}
+
+.card {
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 1rem;
+    overflow: hidden;
+
+    width: 700px;
+    height: 600px;
+
+    background-color: #CCCCCC;
+}
+
+#bottom-section{
+    padding: 1rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#bottom-section > h2 {
+    font-size: 30px;
+}
+
+#bottom-section > h3 { 
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+#bottom-section > p {
+    line-height: 1.5;
+}
+
+#top-section > img{
+    width: 100%;
+}
+
+.refresh {
+    padding: 1rem 2rem;
+}
