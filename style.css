@@ -250,7 +250,7 @@ header {
     background-color: var(--color-100);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     body {
         overflow-x: hidden;
     }
