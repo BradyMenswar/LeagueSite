@@ -10,6 +10,8 @@ let itemImg3 = document.getElementById("item-image3");
 let itemImg4 = document.getElementById("item-image4");
 let itemImg5 = document.getElementById("item-image5");
 
+let itemName0 = document.getElementById("item-name0");
+
 let sumImg0 = document.getElementById("sum-image0");
 let sumImg1 = document.getElementById("sum-image1");
 
@@ -193,11 +195,17 @@ function refresh() {
         champImg.src = "LeagueData/img/champion/splash/" + Object.keys(champData.data)[champIndex] + "_0.jpg";
 
     itemImg0.src = "LeagueData/12.9.1/img/item/" + parseInt(itemList[0]) + ".png";
+    itemImg0.title = itemData.data[itemList[0]].name;
     itemImg1.src = "LeagueData/12.9.1/img/item/" + parseInt(itemList[1]) + ".png";
+    itemImg1.title = itemData.data[itemList[1]].name;
     itemImg2.src = "LeagueData/12.9.1/img/item/" + parseInt(itemList[2]) + ".png";
+    itemImg2.title = itemData.data[itemList[2]].name;
     itemImg3.src = "LeagueData/12.9.1/img/item/" + parseInt(itemList[3]) + ".png";
+    itemImg3.title = itemData.data[itemList[3]].name;
     itemImg4.src = "LeagueData/12.9.1/img/item/" + parseInt(itemList[4]) + ".png";
+    itemImg4.title = itemData.data[itemList[4]].name;
     itemImg5.src = "LeagueData/12.9.1/img/item/" + parseInt(itemList[5]) + ".png";
+    itemImg5.title = itemData.data[itemList[5]].name;
 
     sumImg0.src = "LeagueData/12.9.1/img/spell/" + summonerSpells[summonerSpell0Index];
     sumImg1.src = "LeagueData/12.9.1/img/spell/" + summonerSpells[summonerSpell1Index];
@@ -207,42 +215,58 @@ function refresh() {
     mainRuneTreeName.textContent = runeData[runeTreeIndex].key;
 
     mainRune00.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[0].runes[0].icon;
+    mainRune00.title = runeData[runeTreeIndex].slots[0].runes[0].name;
     mainRune01.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[0].runes[1].icon;
+    mainRune01.title = runeData[runeTreeIndex].slots[0].runes[1].name;
     mainRune02.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[0].runes[2].icon;
+    mainRune02.title = runeData[runeTreeIndex].slots[0].runes[2].name;
     if(runeData[runeTreeIndex].slots[0].runes.length > 3)
     {
         mainRune03.style.display = "block";
         mainRune03.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[0].runes[3].icon;
+        mainRune03.title = runeData[runeTreeIndex].slots[0].runes[3].name;
     }
     else mainRune03.style.display = "none";
 
     mainRune10.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[1].runes[0].icon;
+    mainRune10.title = runeData[runeTreeIndex].slots[1].runes[0].name;
     mainRune11.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[1].runes[1].icon;
+    mainRune11.title = runeData[runeTreeIndex].slots[1].runes[1].name;
     mainRune12.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[1].runes[2].icon;
+    mainRune12.title = runeData[runeTreeIndex].slots[1].runes[2].name;
     if(runeData[runeTreeIndex].slots[1].runes.length > 3)
     {
         mainRune13.style.display = "block";
         mainRune13.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[1].runes[3].icon;
+        mainRune13.title = runeData[runeTreeIndex].slots[1].runes[3].name;
     }
     else mainRune13.style.display = "none";
 
     mainRune20.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[2].runes[0].icon;
+    mainRune20.title = runeData[runeTreeIndex].slots[2].runes[0].name;
     mainRune21.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[2].runes[1].icon;
+    mainRune21.title = runeData[runeTreeIndex].slots[2].runes[1].name;
     mainRune22.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[2].runes[2].icon;
+    mainRune22.title = runeData[runeTreeIndex].slots[2].runes[2].name;
     if(runeData[runeTreeIndex].slots[2].runes.length > 3)
     {
         mainRune23.style.display = "block";
         mainRune23.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[1].runes[3].icon;
+        mainRune23.title = runeData[runeTreeIndex].slots[1].runes[3].name;
     }
     else mainRune23.style.display = "none";
 
     mainRune30.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[3].runes[0].icon;
+    mainRune30.title = runeData[runeTreeIndex].slots[3].runes[0].name;
     mainRune31.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[3].runes[1].icon;
+    mainRune31.title = runeData[runeTreeIndex].slots[3].runes[1].name;
     mainRune32.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[3].runes[2].icon;
+    mainRune32.title = runeData[runeTreeIndex].slots[3].runes[2].name;
     if(runeData[runeTreeIndex].slots[3].runes.length > 3)
     {
         mainRune33.style.display = "block";
         mainRune33.src = "LeagueData/img/" + runeData[runeTreeIndex].slots[3].runes[3].icon;
+        mainRune33.title = runeData[runeTreeIndex].slots[3].runes[3].name;
     }
     else mainRune33.style.display = "none";
 
@@ -251,32 +275,44 @@ function refresh() {
     secondaryRuneTreeName.textContent = runeData[secondaryTreeIndex].key;
 
     secondaryRune00.src = "LeagueData/img/" + runeData[secondaryTreeIndex].slots[1].runes[0].icon;
+    secondaryRune00.title = runeData[secondaryTreeIndex].slots[1].runes[0].name;
     secondaryRune01.src = "LeagueData/img/" + runeData[secondaryTreeIndex].slots[1].runes[1].icon;
+    secondaryRune01.title = runeData[secondaryTreeIndex].slots[1].runes[1].name;
     secondaryRune02.src = "LeagueData/img/" + runeData[secondaryTreeIndex].slots[1].runes[2].icon;
+    secondaryRune02.title = runeData[secondaryTreeIndex].slots[1].runes[2].name;
     if(runeData[secondaryTreeIndex].slots[1].runes.length > 3)
     {
         secondaryRune03.style.display = "block";
         secondaryRune03.src = "LeagueData/img/" + runeData[secondaryTreeIndex].slots[1].runes[3].icon;
+        secondaryRune03.title = runeData[secondaryTreeIndex].slots[1].runes[3].name;
     }
     else secondaryRune03.style.display = "none";
 
     secondaryRune10.src = "LeagueData/img/" + runeData[secondaryTreeIndex].slots[2].runes[0].icon;
+    secondaryRune10.title = runeData[secondaryTreeIndex].slots[2].runes[0].name;
     secondaryRune11.src = "LeagueData/img/" + runeData[secondaryTreeIndex].slots[2].runes[1].icon;
+    secondaryRune11.title = runeData[secondaryTreeIndex].slots[2].runes[1].name;
     secondaryRune12.src = "LeagueData/img/" + runeData[secondaryTreeIndex].slots[2].runes[2].icon;
+    secondaryRune12.title = runeData[secondaryTreeIndex].slots[2].runes[2].name;
     if(runeData[secondaryTreeIndex].slots[2].runes.length > 3)
     {
         secondaryRune13.style.display = "block";
         secondaryRune13.src = "LeagueData/img/" + runeData[secondaryTreeIndex].slots[2].runes[3].icon;
+        secondaryRune13.title = runeData[secondaryTreeIndex].slots[2].runes[3].name;
     }
     else secondaryRune13.style.display = "none";
 
     secondaryRune20.src = "LeagueData/img/" + runeData[secondaryTreeIndex].slots[3].runes[0].icon;
+    secondaryRune20.title = runeData[secondaryTreeIndex].slots[3].runes[0].name;
     secondaryRune21.src = "LeagueData/img/" + runeData[secondaryTreeIndex].slots[3].runes[1].icon;
+    secondaryRune21.title = runeData[secondaryTreeIndex].slots[3].runes[1].name;
     secondaryRune22.src = "LeagueData/img/" + runeData[secondaryTreeIndex].slots[3].runes[2].icon;
+    secondaryRune22.title = runeData[secondaryTreeIndex].slots[3].runes[2].name;
     if(runeData[secondaryTreeIndex].slots[3].runes.length > 3)
     {
         secondaryRune23.style.display = "block";
         secondaryRune23.src = "LeagueData/img/" + runeData[secondaryTreeIndex].slots[3].runes[3].icon;
+        secondaryRune23.title = runeData[secondaryTreeIndex].slots[3].runes[3].name;
     }
     else secondaryRune23.style.display = "none";
 

@@ -26,20 +26,21 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 5rem;
+    gap: 2rem;
     margin-top: 2rem;
 
 }
 
 .row-container {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .column-container {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+
+    gap: 2rem;
 }
 
 .champ-card {
@@ -50,7 +51,8 @@ header {
     border-radius: 1rem;
     overflow: hidden;
 
-    width: 450px;
+    width: 400px;
+    height: 475px;
 
     background-color: var(--color-900);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -59,13 +61,13 @@ header {
 .items-card {
     display: flex;
     align-self: start;
+    justify-content: space-around;
 
-    gap: 1rem;
+    padding: 1rem 0.75rem;
 
-    padding: 1rem 1.5rem;
-
+    width: 400px;
     border-radius: 1rem;
-    overflow: hidden;
+    /* overflow: hidden; */
 
 
 
@@ -76,11 +78,9 @@ header {
 
 .spells-card {
     display: flex;
-    align-self: center;
-
     gap: 1rem;
 
-    padding: 1rem 1.5rem;
+    padding: 1rem;
 
     border-radius: 1rem;
     overflow: hidden;
@@ -94,10 +94,15 @@ header {
 
     gap: 4rem;
 
-    padding: 1rem 1.5rem;
+    height: 475px;
+
+    padding: 3rem;
 
     border-radius: 1rem;
     overflow: hidden;
+
+    align-items: flex-start;
+    align-self: flex-start;
 
     background-color: var(--color-900);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -105,14 +110,16 @@ header {
 
 .main-runes {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
-    gap: 1rem;
+    height: 100%;
 }
 
 .secondary-runes {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
-    gap: 1rem;
+    height: 100%;
 }
 
 #split {
@@ -163,8 +170,8 @@ header {
 .sum-spell {
     border: 2px solid white;
     border-radius: 0.5rem;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 
     overflow: hidden;
 }
@@ -172,9 +179,8 @@ header {
 .item {
     border: 2px solid white;
     border-radius: 0.5rem;
-    width: 70px;
-    height: 70px;
-
+    width: 50px;
+    height: 50px;
     overflow: hidden;
 }
 
@@ -187,6 +193,11 @@ header {
 }
 
 .item > img {
+    width: 100%;
+    
+}
+
+.sum-spell > img {
     width: 100%;
 }
 
@@ -225,5 +236,54 @@ header {
 
 .refresh {
     align-self: center;
+    justify-self: flex-end;
     padding: 1rem 2rem;
+
+    border: 2px solid var(--color-400);
+    background-color: var(--color-900);
+    color: var(--color-100);
+    border-radius: 2rem;
+}
+
+.refresh:hover {
+    color: var(--color-900);
+    background-color: var(--color-100);
+}
+
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+    .row-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .champ-card {
+        align-self: center;
+        width: 350px;
+    }
+
+    .items-card {
+        width: 350px;
+    }
+
+    .runes-card {
+        width: 350px;
+        flex-direction: column;
+        align-items: center;
+        height:fit-content
+    }
+
+    .main-runes {
+        gap: 1rem;
+    }
+
+    .secondary-runes {
+        gap: 1rem;
+    }
+
+    .refresh {
+        margin-bottom: 2rem;
+    }
 }
