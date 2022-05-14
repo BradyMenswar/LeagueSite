@@ -9,18 +9,144 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <header>
+        <h1>Random Champion Generator</h1>
+    </header>
     <div class="container">
-        <div class="card">
-            <div id="top-section">
-                <img id="champ-image" src="" alt="">
+        <div class="row-container">
+            <div class="champ-card">
+                <div class="top-section">
+                    <img id="champ-image" src="" alt="">
+                </div>
+                <div class="bottom-section">
+                    <h2 id="champ-name"></h2>
+                    <h3 id="champ-title"></h3>
+                    <p id="champ-desc"></p>
+                </div>
             </div>
-            <div id="bottom-section">
-                <h2 id="champ-name"></h2>
-                <h3 id="champ-title"></h3>
-                <p id="champ-desc"></p>
+            <div class="column-container">
+                <div class="items-card">
+                    <div class="item" value="1">
+                        <img id="item-image0" src="" alt="">
+                    </div>
+    
+                    <div class="item" value="2">
+                        <img id="item-image1" src="" alt="">
+                    </div>
+    
+                    <div class="item">
+                        <img id="item-image2" src="" alt="">
+                    </div>
+    
+                    <div class="item">
+                        <img id="item-image3" src="" alt="">
+                    </div>
+    
+                    <div class="item">
+                        <img id="item-image4" src="" alt="">
+                    </div>
+    
+                    <div class="item">
+                        <img id="item-image5" src="" alt="">
+                    </div>
+                </div>
+                <div class="spells-card">
+                    <div class="sum-spell">
+                        <img id="sum-image0" src="" alt="">
+                    </div>
+                    <div class="sum-spell">
+                        <img id="sum-image1" src="" alt="">
+                    </div>
+                </div>
+
+                <button class="refresh" onclick="refresh()">Refresh</button>
+            </div>
+            <div class="runes-card">
+                <div class="main-runes">
+                    <div class="tree">
+                        <img id="main-rune-tree-image" src="LeagueData\img\perk-images\Styles\7200_Domination.png" alt=" ">
+                        <h2 id="main-rune-tree-name">Domination</h2>
+                    </div>
+
+                    <div class="rune-section">
+                        <img id="main-rune00" src="" alt="">
+                        <img id="main-rune01" src="" alt="">
+                        <img id="main-rune02" src="" alt="">
+                        <img id="main-rune03" src="" alt="">
+                    </div>
+
+                    <div class="rune-section">
+                        <img id="main-rune10" src="" alt="">
+                        <img id="main-rune11" src="" alt="">
+                        <img id="main-rune12" src="" alt="">
+                        <img id="main-rune13" src="" alt="">
+                    </div>
+
+                    <div class="rune-section">
+                        <img id="main-rune20" src="" alt="">
+                        <img id="main-rune21" src="" alt="">
+                        <img id="main-rune22" src="" alt="">
+                        <img id="main-rune23" src="" alt="">
+                    </div>
+
+                    <div class="rune-section">
+                        <img id="main-rune30" src="" alt="">
+                        <img id="main-rune31" src="" alt="">
+                        <img id="main-rune32" src="" alt="">
+                        <img id="main-rune33" src="" alt="">
+                    </div>
+
+                </div>
+                <div class="secondary-runes">
+                    <div class="tree">
+                        <img id="secondary-rune-tree-image"src="" alt="Tree">
+                        <h2 id="secondary-rune-tree-name">Tree</h2>
+                    </div>
+
+                    <div class="rune-section">
+                        <img id="secondary-rune00" src="" alt="">
+                        <img id="secondary-rune01" src="" alt="">
+                        <img id="secondary-rune02" src="" alt="">
+                        <img id="secondary-rune03" src="" alt="">
+                    </div>
+
+                    <div class="rune-section">
+                        <img id="secondary-rune10" src="" alt="">
+                        <img id="secondary-rune11" src="" alt="">
+                        <img id="secondary-rune12" src="" alt="">
+                        <img id="secondary-rune13" src="" alt="">
+                    </div>
+
+                    <div class="rune-section" id='split'>
+                        <img id="secondary-rune20" src="" alt="">
+                        <img id="secondary-rune21" src="" alt="">
+                        <img id="secondary-rune22" src="" alt="">
+                        <img id="secondary-rune23" src="" alt="">
+                    </div>
+
+                    <div class="rune-section">
+                        <img id="offense-rune0" src="LeagueData/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png" alt="">
+                        <img id="offense-rune1" src="LeagueData/img/perk-images/StatMods/StatModsAttackSpeedIcon.png" alt="">
+                        <img id="offense-rune2" src="LeagueData/img/perk-images/StatMods/StatModsCDRScalingIcon.png" alt="">
+                    </div>
+
+                    <div class="rune-section">
+                        <img id="flex-rune0" src="LeagueData/img/perk-images/StatMods/StatModsAdaptiveForceIcon.png" alt="">
+                        <img id="flex-rune1" src="LeagueData/img/perk-images/StatMods/StatModsArmorIcon.png" alt="">
+                        <img id="flex-rune2" src="LeagueData/img/perk-images/StatMods/StatModsMagicResIcon.png" alt="">
+                    </div>
+
+                    <div class="rune-section">
+                        <img id="defense-rune0" src="LeagueData/img/perk-images/StatMods/StatModsHealthScalingIcon.png" alt="">
+                        <img id="defense-rune1" src="LeagueData/img/perk-images/StatMods/StatModsArmorIcon.png" alt="">
+                        <img id="defense-rune2" src="LeagueData/img/perk-images/StatMods/StatModsMagicResIcon.png" alt="">
+                    </div>
+
+                </div>
             </div>
         </div>
-        <button class="refresh" onclick="refresh()">Refresh</button>
+        
+        
     </div>
     
     
