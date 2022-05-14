@@ -123,7 +123,10 @@ function getRandomInt(min, max) {
 function refresh() {
     // console.log(itemData);
     // console.log(champData.data);
-    console.log(runeData);
+    // console.log(runeData);
+
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 
     let allActive = document.querySelectorAll(".active");
 
