@@ -262,6 +262,7 @@ header {
     .champ-card {
         align-self: center;
         width: 350px;
+        height: fit-content;
     }
 
     .items-card {
