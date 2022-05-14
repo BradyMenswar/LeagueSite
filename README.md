@@ -1,2 +1,2 @@
 # League of Legends Champion Generator
-Random LoL generator
+This site allows the user to get a randomly generated build to play as in League of Legends.
