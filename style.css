@@ -230,8 +230,32 @@ header {
     line-height: 1.5;
 }
 
-.top-section > img{
+.top-section > a > img{
     width: 100%;
+}
+
+.top-section > a {
+    text-decoration: none;
+    color: var(--color-100);
+    position: relative;
+    font-size: 0;
+}
+
+.top-section > a > h3 {
+    position: absolute;
+    left: 7.5rem;
+    bottom: 5.5rem;
+}
+
+/* .top-section > a:hover {
+    font-size: 1rem;
+} */
+.top-section > a > img:hover{
+    filter: brightness(0.5);
+}
+
+.top-section > a > h3 {
+
 }
 
 .refresh {

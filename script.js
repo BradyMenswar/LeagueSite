@@ -2,6 +2,7 @@ let champName = document.getElementById("champ-name");
 let champTitle = document.getElementById("champ-title");
 let champDesc = document.getElementById("champ-desc");
 let champImg = document.getElementById("champ-image");
+let champLink = document.getElementById("champ-link");
 
 let itemImg0 = document.getElementById("item-image0");
 let itemImg1 = document.getElementById("item-image1");
@@ -86,7 +87,7 @@ let defenseRunes = [defenseRune0, defenseRune1, defenseRune2];
 let mythicItems = [4644, 6632, 6691, 6692, 3001, 6656, 6662, 6671, 6630, 3152, 6673, 4005, 6672, 6653, 3190, 6655, 6617, 4636, 6693, 4633, 2065, 6631, 3068, 3078, 6664];
 let tier2Boots = [3006, 3009, 3158, 3111, 3117, 3047, 3020];
 let legendaryItems = [];
-let summonerSpells = ["SummonerHeal.png", "SummonerHaste.png", "SummonerBarrier.png", "SummonerExhaust.png", "SummonerSnowball.png", "SummonerMana.png", "SummonerFlash.png", "SummonerTeleport.png", "SummonerSmite.png", "SummonerBoost.png", "SummonerDot.png"];
+let summonerSpells = ["SummonerHeal.png", "SummonerHaste.png", "SummonerBarrier.png", "SummonerExhaust.png", "SummonerFlash.png", "SummonerTeleport.png", "SummonerSmite.png", "SummonerBoost.png", "SummonerDot.png"];
 
 var champData;
 var itemData;
@@ -107,7 +108,7 @@ async function getData() {
 function getLegendaryItems() {
     for(var i = 0; i < Object.keys(itemData.data).length; i++)
     {
-        if(itemData.data[Object.keys(itemData.data)[i]].depth === 3 && itemData.data[Object.keys(itemData.data)[i]].into === undefined)
+        if(itemData.data[Object.keys(itemData.data)[i]].depth === 3 && itemData.data[Object.keys(itemData.data)[i]].into === undefined && itemData.data[Object.keys(itemData.data)[i]].maps[11] === true)
         {
             legendaryItems.push(Object.keys(itemData.data)[i]);
         }
@@ -152,13 +153,13 @@ function refresh() {
     let bootsIndex = getRandomInt(0, 7);
     
     item2Index = getRandomInt(0, 62);
-    do{ item3Index = getRandomInt(0, 62);} while(item3Index === item2Index);
-    do{ item4Index = getRandomInt(0, 62);} while(item4Index === item2Index || item4Index === item3Index);
-    do{ item5Index = getRandomInt(0, 62);} while(item5Index === item2Index || item5Index === item3Index || item5Index === item4Index);
+    do{ item3Index = getRandomInt(0, legendaryItems.length);} while(item3Index === item2Index);
+    do{ item4Index = getRandomInt(0, legendaryItems.length);} while(item4Index === item2Index || item4Index === item3Index);
+    do{ item5Index = getRandomInt(0, legendaryItems.length);} while(item5Index === item2Index || item5Index === item3Index || item5Index === item4Index);
 
 
-    summonerSpell0Index = getRandomInt(0, 11);
-    do{ summonerSpell1Index = getRandomInt(0, 11);} while(summonerSpell1Index === summonerSpell0Index);
+    summonerSpell0Index = getRandomInt(0, summonerSpells.length);
+    do{ summonerSpell1Index = getRandomInt(0, summonerSpells.length);} while(summonerSpell1Index === summonerSpell0Index);
 
     let runeTreeIndex = getRandomInt(0, 5);
     do{ secondaryTreeIndex = getRandomInt(0, 5);} while(secondaryTreeIndex === runeTreeIndex);
@@ -187,7 +188,10 @@ function refresh() {
     itemList[4] = legendaryItems[item4Index];
     itemList[5] = legendaryItems[item5Index];
 
-    let currentChampion = champData.data[Object.keys(champData.data)[champIndex]]
+    let currentChampion = champData.data[Object.keys(champData.data)[champIndex]];
+
+    let removeSpace = currentChampion.name.replace(' ', '-').toLowerCase();
+    champLink.href = "https://www.leagueoflegends.com/en-us/champions/" + removeSpace.replace("'", "-");
     
     champName.textContent = currentChampion.name;
     champTitle.textContent = currentChampion.title;
