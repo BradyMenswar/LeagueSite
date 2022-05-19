@@ -334,6 +334,7 @@ function refresh() {
     offenseRunes[offenseIndex].classList.add("active");
     flexRunes[flexIndex].classList.add("active");
     defenseRunes[defenseIndex].classList.add("active");
+
 }
 
 getData();

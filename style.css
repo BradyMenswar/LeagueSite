@@ -39,7 +39,7 @@ header {
 .column-container {
     display: flex;
     flex-direction: column;
-
+    align-items: center;
     gap: 2rem;
 }
 
@@ -48,19 +48,19 @@ header {
     display: flex;
     flex-direction: column;
 
+    font-size: 1.5rem;
     border-radius: 1rem;
     overflow: hidden;
 
-    width: 400px;
-    height: 475px;
+    width: 40vw;
 
     background-color: var(--color-900);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+
 .items-card {
     display: flex;
-    align-self: start;
     justify-content: space-around;
 
     padding: 1rem 0.75rem;
@@ -215,14 +215,13 @@ header {
 }
 
 .bottom-section > h2 {
-    font-size: 30px;
-
+    font-size: 2.5rem;
     color: var(--color-400);
 }
 
 .bottom-section > h3 { 
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 1.5rem;
     color: var(--color-100);
 }
 
@@ -247,15 +246,8 @@ header {
     bottom: 5.5rem;
 }
 
-/* .top-section > a:hover {
-    font-size: 1rem;
-} */
 .top-section > a > img:hover{
     filter: brightness(0.5);
-}
-
-.top-section > a > h3 {
-
 }
 
 .refresh {
@@ -287,6 +279,7 @@ header {
         align-self: center;
         width: 350px;
         height: fit-content;
+        font-size: 1.1rem;
     }
 
     .items-card {
@@ -297,7 +290,12 @@ header {
         width: 350px;
         flex-direction: column;
         align-items: center;
-        height:fit-content
+        height:fit-content;
+        
+    }
+
+    .rune-section {
+        width: 250px;
     }
 
     .main-runes {
