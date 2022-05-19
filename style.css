@@ -29,6 +29,8 @@ header {
     gap: 2rem;
     margin-top: 2rem;
 
+    padding: 1rem;
+
 }
 
 .row-container {
@@ -40,7 +42,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .champ-card {
@@ -48,11 +50,14 @@ header {
     display: flex;
     flex-direction: column;
 
-    font-size: 1.5rem;
+    font-size: 100%;
     border-radius: 1rem;
     overflow: hidden;
 
     width: 40vw;
+    height: fit-content;
+
+    padding-bottom: 2rem;
 
     background-color: var(--color-900);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
